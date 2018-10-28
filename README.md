@@ -1,2 +1,0 @@
-# c
-  my c practice
