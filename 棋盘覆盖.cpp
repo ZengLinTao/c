@@ -12,11 +12,11 @@ void chess_board(int tr, int tc, int dr, int dc, int size)
 	if (size == 1)
 		return;
 
-	int t = tile++;   //tile means ÍßÆ¬£¬»ùÊ¯£¬¸²¸ÇµÄ²½Öè
-	int sz = size / 2;    //Ã¿´Î½øĞĞ»®·Ö
+	int t = tile++;   //tile means ç“¦ç‰‡ï¼ŒåŸºçŸ³ï¼Œè¦†ç›–çš„æ­¥éª¤
+	int sz = size / 2;    //æ¯æ¬¡è¿›è¡Œåˆ’åˆ†
 
 	//cover top left corner
-	if (dr < tr + sz && dc < tc + sz)     //notice < <   //×¢ÒâÒ»¹²ËÄÖÖÇé¿ö£¬<>=Õâ¼¸¸ö·ûºÅÒª¿ØÖÆºÃ±ß½ç
+	if (dr < tr + sz && dc < tc + sz)     //notice < <   //æ³¨æ„ä¸€å…±å››ç§æƒ…å†µï¼Œ<>=è¿™å‡ ä¸ªç¬¦å·è¦æ§åˆ¶å¥½è¾¹ç•Œ
 		chess_board(tr, tc, dr, dc, sz);
 	else {
 		board[tr + sz - 1][tc + sz - 1] = t;
@@ -43,18 +43,18 @@ void chess_board(int tr, int tc, int dr, int dc, int size)
 	if (dr >= tr + sz && dc >= tc + sz)  //notice >= >=
 		chess_board(tr + sz, tc + sz, dr, dc, sz);
 	else {
-		board[tr + sz][tc + sz] = t;                       //±ê¼ÇÒ»¸ö¼ÙÉèµÄÌØÊâµã
-		chess_board(tr + sz, tc + sz, tr + sz, tc + sz, sz);   //µİ¹é¸Ã²¿·Ö
+		board[tr + sz][tc + sz] = t;                       //æ ‡è®°ä¸€ä¸ªå‡è®¾çš„ç‰¹æ®Šç‚¹
+		chess_board(tr + sz, tc + sz, tr + sz, tc + sz, sz);   //é€’å½’è¯¥éƒ¨åˆ†
 	}
 }
 
 void print_chess_board()
 {
 	int size=4;
-	cout.setf(ios::left);     //×ó¶ÔÆë
+	cout.setf(ios::left);     //å·¦å¯¹é½
 	for (int i = 0; i < size; ++i) {
 		for (int j = 0; j < size; ++j) {
-			cout.width(3);    //´òÓ¡¿í¶ÈÎª3
+			cout.width(3);    //æ‰“å°å®½åº¦ä¸º3
 			cout << board[i][j];
 		}
 		cout << endl;
@@ -64,7 +64,7 @@ void print_chess_board()
 int main()
 {
 	int size = 0;
-	cout << "ÇëÊäÈësize" << endl;
+	cout << "è¯·è¾“å…¥size" << endl;
 	cin >> size;
 	chess_board(0, 0, 3, 4, size);
 	print_chess_board();
