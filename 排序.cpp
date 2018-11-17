@@ -23,7 +23,7 @@ void Maopao(int a[]) {
 		cout << a[i] << "  ";
 	cout << endl;
 	long long end = clock();
-	cout << "\nÊ±¼äÎª\n" << endl;
+	cout << "\næ—¶é—´ä¸º\n" << endl;
 	cout << double(end - start) / CLOCKS_PER_SEC << endl;
 
 }
@@ -45,7 +45,7 @@ void Choose(int a[]) {
 		cout << a[i] << "  ";
 	cout << endl;
 	long long end = clock();
-	cout << "\nÊ±¼äÎª\n" << endl;
+	cout << "\næ—¶é—´ä¸º\n" << endl;
 	cout << double(end - start) / CLOCKS_PER_SEC << endl;
 
 }
@@ -55,19 +55,19 @@ void insert(int a[]){
 
 	   for (i = 1; i < 5000; i++)
 	     {
-		        //Îªa[i]ÔÚÇ°ÃæµÄa[0...i-1]ÓĞĞòÇø¼äÖĞÕÒÒ»¸öºÏÊÊµÄÎ»ÖÃ
+		        //ä¸ºa[i]åœ¨å‰é¢çš„a[0...i-1]æœ‰åºåŒºé—´ä¸­æ‰¾ä¸€ä¸ªåˆé€‚çš„ä½ç½®
 			       for (j = i - 1; j >= 0; j--)
 		           if (a[j] < a[i])
 		        break;
 		
-			         //ÈçÕÒµ½ÁËÒ»¸öºÏÊÊµÄÎ»ÖÃ
+			         //å¦‚æ‰¾åˆ°äº†ä¸€ä¸ªåˆé€‚çš„ä½ç½®
 			         if (j != i - 1)
 			         {
-			             //½«±Èa[i]´óµÄÊı¾İÏòºóÒÆ
+			             //å°†æ¯”a[i]å¤§çš„æ•°æ®å‘åç§»
 				            int temp = a[i];
 			            for (k = i - 1; k > j; k--)
 			                 a[k + 1] = a[k];
-		             //½«a[i]·Åµ½ÕıÈ·Î»ÖÃÉÏ
+		             //å°†a[i]æ”¾åˆ°æ­£ç¡®ä½ç½®ä¸Š
 				            a[k + 1] = temp;
 			        }
 		    }
@@ -75,7 +75,7 @@ void insert(int a[]){
 		  cout << a[i] << "  ";
 	   cout << endl;
 	   long long end = clock();
-	   cout << "\nÊ±¼äÎª\n" << endl;
+	   cout << "\næ—¶é—´ä¸º\n" << endl;
 	   cout << double(end - start) / CLOCKS_PER_SEC << endl;
 }
 
@@ -84,13 +84,13 @@ void shellsort(int a[]) {
 	int i, j;
 	int r, temp;
 	int x = 0;
-	for (r = 5000 / 2; r >= 1; r /= 2)//r>=1±£Ö¤ÖÁÉÙÓĞÁ½¸ö¿ÉÒÔ±È½ÏµÄÊı£¬r/=2È·¶¨ĞòÁĞ¶Ô
+	for (r = 5000 / 2; r >= 1; r /= 2)//r>=1ä¿è¯è‡³å°‘æœ‰ä¸¤ä¸ªå¯ä»¥æ¯”è¾ƒçš„æ•°ï¼Œr/=2ç¡®å®šåºåˆ—å¯¹
 	{
 		for (i = r; i < 5000; i++)
 		{
 			temp = a[i];
 			j = i - r;
-			while (j >= 0 && temp < a[j])//¶ÔÅä¶ÔµÄÁ½¸öÊı½øĞĞ±È½Ï
+			while (j >= 0 && temp < a[j])//å¯¹é…å¯¹çš„ä¸¤ä¸ªæ•°è¿›è¡Œæ¯”è¾ƒ
 			{
 				a[j + r] = a[j];
 				j -= r;
@@ -102,7 +102,7 @@ void shellsort(int a[]) {
 		cout << a[i] << "  ";
 	cout << endl;
 	long long end = clock();
-	cout << "\nÊ±¼äÎª\n" << endl;
+	cout << "\næ—¶é—´ä¸º\n" << endl;
 	cout << double(end - start) / CLOCKS_PER_SEC << endl;
 }
 	
@@ -129,7 +129,7 @@ int main(){
 	  in.close();
    int ch;
   while (1) {
-	  printf("ÇëÑ¡ÔñÅÅĞòËã·¨ \n 1£ºÃ°ÅİÅÅĞò\n 2: Ñ¡ÔñÅÅĞò \n 3£º²åÈëÅÅĞò \n 4:shellÅÅĞò \n \n \n");
+	  printf("è¯·é€‰æ‹©æ’åºç®—æ³• \n 1ï¼šå†’æ³¡æ’åº\n 2: é€‰æ‹©æ’åº \n 3ï¼šæ’å…¥æ’åº \n 4:shellæ’åº \n \n \n");
 	  scanf_s("%d", &ch);
 	  switch (ch) {
 	  case 1:  Maopao(a); continue;
