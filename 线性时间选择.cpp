@@ -102,10 +102,10 @@ void BubbleSort(Type a[], int p, int r)
 {
 	//记录一次遍历中是否有元素的交换   
 	bool exchange;
-	for (int i = p; i <= r - 1; i++)
+	for (int i = p; i <= r ; i++)
 	{
 		exchange = false;
-		for (int j = i + 1; j <= r; j++)
+		for (int j = r; j > p; j--)
 		{
 			if (a[j] < a[j - 1])
 			{
