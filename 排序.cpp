@@ -120,13 +120,9 @@ int main(){
   int a[5000];
   int i;
   int *p;
-  for ( i = 0; i < 5000; i++)
-  {
-	  a[i] = rand() % 100000;	 
-  }
-  p = a;
-   for (int i=0;i<5000;i++)  
-	  in.close();
+ for (i = 0; i < 5000; i++) 
+	  in >> a[i];
+    in.close();	  
    int ch;
   while (1) {
 	  printf("请选择排序算法 \n 1：冒泡排序\n 2: 选择排序 \n 3：插入排序 \n 4:shell排序 \n \n \n");
