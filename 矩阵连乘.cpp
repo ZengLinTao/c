@@ -69,8 +69,8 @@ void digui() {
 		m[i] = new int[L];
 	}
 
-	cout << "¾ØÕóµÄ×îÉÙ¼ÆËã´ÎÊýÎª£º" << MatrixChain(6, m, s, p) << endl;
-	cout << "¾ØÕó×îÓÅ¼ÆËã´ÎÐòÎª£º" << endl;
+	cout << "çŸ©é˜µçš„æœ€å°‘è®¡ç®—æ¬¡æ•°ä¸ºï¼š" << MatrixChain(6, m, s, p) << endl;
+	cout << "çŸ©é˜µæœ€ä¼˜è®¡ç®—æ¬¡åºä¸ºï¼š" << endl;
 	Traceback(1, 6, s);
 	system("pause");
 }
@@ -84,8 +84,8 @@ void recur() {
 		s[i] = new int[L];
 	}
 
-	cout << "¾ØÕóµÄ×îÉÙ¼ÆËã´ÎÊýÎª£º" << RecurMatrixChain(1, 6, s, p) << endl;
-	cout << "¾ØÕó×îÓÅ¼ÆËã´ÎÐòÎª£º" << endl;
+	cout << "çŸ©é˜µçš„æœ€å°‘è®¡ç®—æ¬¡æ•°ä¸ºï¼š" << RecurMatrixChain(1, 6, s, p) << endl;
+	cout << "çŸ©é˜µæœ€ä¼˜è®¡ç®—æ¬¡åºä¸ºï¼š" << endl;
 	Traceback(1, 6, s);
 	system("pause");
 }
@@ -104,7 +104,7 @@ void Traceback(int i, int j, int **s)
 	{
 		int s;
 		while (1) {
-			printf("ÇëÑ¡Ôñ£º\n 1:¶¯Ì¬¹æ»®µü´úÊµÏÖ\n 2:ÖØµþµÝ¹é\n");
+			printf("è¯·é€‰æ‹©ï¼š\n 1:åŠ¨æ€è§„åˆ’è¿­ä»£å®žçŽ°\n 2:é‡å é€’å½’\n");
 			scanf_s("%d", &s);
 			switch (s) {
 			case 1: {
